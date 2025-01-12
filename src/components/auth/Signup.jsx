@@ -40,14 +40,13 @@ const Signup = () => {
             const user = userCredential.user
             setMessage("account created succesfully")
             setRole("user")
-            navigate("/dashboard")
-
             const userRef = doc(db, "users", user.uid)
             await setDoc(userRef, {
                 name,
                 email,
                 role: "user"
             })
+            navigate("/dashboard")
 
         } catch (error) {
             setError(error.message.split("/")[1])
