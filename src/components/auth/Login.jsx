@@ -29,13 +29,11 @@ const Login = () => {
       const userCredential = await login(email, password)
       const user = userCredential.user
       setMessage("account logged in succesfully")
-      navigate("/dashboard")
-
       const userRef = doc(db, "users", user.uid)
       const userDoc = await getDoc(userRef)
       const userData = userDoc.data()
       setRole(userData.role)
-      console.log(userData.role)
+      navigate("/dashboard")
     } catch (error) {
       setError(error.message.split("/")[1])
     }
