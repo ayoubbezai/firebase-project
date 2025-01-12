@@ -4,8 +4,6 @@ import User from "../userPages/User";
 
 const Dashboard = () => {
     const { role } = useAuth()
-    
-
 
     return (
         <div>
