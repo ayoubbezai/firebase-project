@@ -4,8 +4,6 @@ import Signup from "./components/auth/Signup";
 import Login from "./components/auth/Login";
 import Home from "./pages/home/Home";
 import Dashboard from "./pages/dashboard/Dashboard";
-import User from "./pages/userPages/User";
-import Admin from "./pages/adminPages/Admin";
 import ProtectedRoute from "./utils/ProtectedRoute";
 
 function App() {
@@ -18,8 +16,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route element={<ProtectedRoute />}>
             <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/user" element={<User />} />
-            <Route path="/admin" element={<Admin />} />
+ 
           </Route>
         </Routes>
       </AuthProvider>
