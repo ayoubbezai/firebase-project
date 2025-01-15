@@ -1,9 +1,10 @@
 import { useAuth } from "../../context/AuthContext";
-import { useNavigate } from "react-router-dom";
-import { useEffect } from "react";
+import Admin from "../adminPages/Admin";
+import User from "../userPages/User";
 
 const Dashboard = () => {
     const { role } = useAuth()
+<<<<<<< HEAD
     const navigate = useNavigate()
 
     useEffect(() => {
@@ -14,10 +15,12 @@ const Dashboard = () => {
         }
 
     }, [role, navigate])
+=======
+>>>>>>> 7bae2cb0aee909451bbf674337816352e3d329f9
 
     return (
         <div>
-            <h1 className="text-center text-2xl font-bold">loading...</h1>
+            {role === "admin" ? <Admin /> : <User />}
         </div>
     )
 }

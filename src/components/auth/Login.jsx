@@ -34,7 +34,10 @@ const Login = () => {
       const userData = userDoc.data()
       setRole(userData.role)
       navigate("/dashboard")
+<<<<<<< HEAD
       console.log(userData.role)
+=======
+>>>>>>> 7bae2cb0aee909451bbf674337816352e3d329f9
     } catch (error) {
       setError(error.message.split("/")[1])
     }
