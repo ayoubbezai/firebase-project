@@ -12,6 +12,7 @@ const Dashboard = () => {
         } else if (role === "user") {
             navigate("/user")
         }
+
     }, [role, navigate])
 
     return (
